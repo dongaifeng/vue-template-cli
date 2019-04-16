@@ -37,19 +37,19 @@ module.exports = {
       when: 'isNotTest',
       type: 'string',
       required: true,
-      message: 'Project name',
+      message: '请输入项目名',
     },
     description: {
       when: 'isNotTest',
       type: 'string',
       required: false,
-      message: 'Project description',
+      message: '请输入项目描述',
       default: 'A Vue.js project',
     },
     author: {
       when: 'isNotTest',
       type: 'string',
-      message: 'Author',
+      message: '作者',
     },
     build: {
       when: 'isNotTest',
@@ -133,29 +133,29 @@ module.exports = {
       type: 'confirm',
       message: 'Setup e2e tests with Nightwatch?',
     },
-    autoInstall: {
-      when: 'isNotTest',
-      type: 'list',
-      message:
-        'Should we run `npm install` for you after the project has been created? (recommended)',
-      choices: [
-        {
-          name: 'Yes, use NPM',
-          value: 'npm',
-          short: 'npm',
-        },
-        {
-          name: 'Yes, use Yarn',
-          value: 'yarn',
-          short: 'yarn',
-        },
-        {
-          name: 'No, I will handle that myself',
-          value: false,
-          short: 'no',
-        },
-      ],
-    },
+    // autoInstall: {
+    //   when: 'isNotTest',
+    //   type: 'list',
+    //   message:
+    //     'Should we run `npm install` for you after the project has been created? (recommended)',
+    //   choices: [
+    //     {
+    //       name: 'Yes, use NPM',
+    //       value: 'npm',
+    //       short: 'npm',
+    //     },
+    //     {
+    //       name: 'Yes, use Yarn',
+    //       value: 'yarn',
+    //       short: 'yarn',
+    //     },
+    //     {
+    //       name: 'No, I will handle that myself',
+    //       value: false,
+    //       short: 'no',
+    //     },
+    //   ],
+    // },
   },
   filters: {
     '.eslintrc.js': 'lint',

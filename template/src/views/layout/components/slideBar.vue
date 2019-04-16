@@ -5,10 +5,10 @@
                       <el-submenu :index="items.path" :key="ind" v-if="items.hasChildren">
                         <template slot="title">
                           <i class="el-icon-location"></i>
-                          <span>{{items.title}}</span>
+                          <span>\{{items.title}}</span>
 </template>
           <el-menu-item-group>
-            <el-menu-item :index="item.path" v-for="(item,inds) in items.children" :key="inds">{{item.name}}</el-menu-item>
+            <el-menu-item :index="item.path" v-for="(item,inds) in items.children" :key="inds">\{{item.name}}</el-menu-item>
           </el-menu-item-group>
           <!-- <el-submenu index="1-4">
 <template slot="title">
@@ -19,7 +19,7 @@
         </el-submenu>
         <el-menu-item :index="items.path" :key="ind" v-else>
           <i class="el-icon-menu"></i>
-          <span slot="title">{{items.title}}</span>
+          <span slot="title">\{{items.title}}</span>
         </el-menu-item>
       </template>
     </el-menu>
