@@ -1,24 +1,30 @@
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from "vue";
-import ElementUI from "element-ui";
-import _ from "lodash";
-import axios from "./util/http";
-import "@/style/app.scss";
-import App from "./App.vue";
+import App from "./App";
 import router from "./router";
+//normalize.css
+import "normalize.css/normalize.css";
+// element
+import ElementUI from "element-ui";
+import "element-ui/lib/theme-chalk/index.css";
+//sotre
 import store from "./store";
-import "./registerServiceWorker";
-const moment = require("moment");
-require("moment/locale/zh-cn");
+//storage
+import storage from "./tools/storage";
+//permission
+import "@/permission";
+//global css
+import "@/style/index.css";
 
 Vue.config.productionTip = false;
-Vue.use(require("vue-moment"), { moment });
+Vue.prototype.Storage = storage;
 Vue.use(ElementUI);
-
-Vue.prototype.$http = axios;
-Vue.prototype._ = _;
-
+/* eslint-disable no-new */
 new Vue({
+  el: "#app",
   router,
   store,
-  render: h => h(App)
-}).$mount("#app");
+  components: { App },
+  template: "<App/>"
+});

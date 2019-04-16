@@ -1,0 +1,13 @@
+html,
+body,
+#app,
+.app-container {
+  height: 100%;
+}
+
+/* flex */
+.flex_center_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
