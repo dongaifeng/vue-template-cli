@@ -13,6 +13,7 @@
     "axios": "^0.18.0",
     "element-ui": "^2.4.6",
     "nprogress": "^0.2.0",
+    "mockjs": "^1.0.1-beta3",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
